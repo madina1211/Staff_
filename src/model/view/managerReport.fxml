@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.controller.ManagerReportController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="960.0" stylesheets="@../../resources/theme.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="List of workers ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #28303f;">
+                     <children>
+                        <TableView fx:id="workerTableView" layoutX="22.0" layoutY="108.0" prefHeight="427.0" prefWidth="916.0" stylesheets="@../../resources/tableView.css">
+                           <columns>
+                              <TableColumn fx:id="workerTableColumn" prefWidth="915.1999931335449" text="Worker" />
+                           </columns>
+                        </TableView>
+                        <JFXComboBox fx:id="departmentChoiceBox" layoutX="33.0" layoutY="39.0" prefHeight="30.0" prefWidth="220.0" promptText="Department" style="-fx-background-color: #fafafa;" unFocusColor="#009688" />
+                        <JFXButton fx:id="showButton" layoutX="515.0" layoutY="39.0" onAction="#showButtonOnAction" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #e39fab; -fx-background-radius: 5;" text="Show">
+                           <font>
+                              <Font name="Constantia" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="educationChoiceBox" layoutX="268.0" layoutY="39.0" prefHeight="30.0" prefWidth="220.0" promptText="Education" style="-fx-background-color: #fafafa;" unFocusColor="#009688" />
+                        <ImageView fx:id="excelImageView" fitHeight="76.0" fitWidth="70.0" layoutX="857.0" layoutY="16.0" onMouseClicked="#excelExportWorkerList" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/excel.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Staffing table">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #28303f;">
+                     <children>
+                        <ImageView fx:id="excelImageView1" fitHeight="76.0" fitWidth="70.0" layoutX="876.0" layoutY="14.0" onMouseClicked="#excelExportExperience" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/excel.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="workExperienceTableView" layoutX="22.0" layoutY="115.0" prefHeight="427.0" prefWidth="916.0" stylesheets="@../../resources/tableView.css">
+                           <columns>
+                              <TableColumn fx:id="fioTableColumn" prefWidth="511.1999931335449" text="Firstname Lastname" />
+                              <TableColumn fx:id="experienceTableColumn" prefWidth="404.79998779296875" text="Work experience" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="35.0" layoutY="29.0" prefHeight="46.0" prefWidth="818.0" text="List of employees with work experience in the range from 3 to 20 years" textFill="#f6e7e4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

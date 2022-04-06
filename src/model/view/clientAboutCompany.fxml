@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: #f6e7e4;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.controller.ClientAboutCompanyController">
+   <children>
+      <ImageView fitHeight="53.0" fitWidth="143.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon.png" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" layoutX="36.0" layoutY="100.0" prefHeight="454.0" prefWidth="674.0" stylesheets="@../../resources/textareaStyle.css" text="The Boring Company – Technical University of Karaganda has been connecting technical, &#10;economic, natural sciences and artistic disciplines in modern study programmes for more &#10;than 10 years responding to the real problems of the present.&#10;We carry out basic and applied research at the highest level. Thanks to tradition and &#10;cooperation with industry as well as many domestic and foreign universities in a wide &#10;range of sectors, we provide innovative solutions in a number of fields and the certainty &#10;of employment to our graduates.&#10;&#10;We are a part of the university system that is the highest level of the educational system.&#10;We pass on knowledge, develop skills and create a space for the professional growth of &#10;individuals and the development of the whole society in areas with technological and &#10;economical specializations. We cooperate with governmental organizations, local &#10;authorities, domestic and foreign universities, scientific institutions, organizations and &#10;individuals. Our fundamental task is:&#10;Providing higher education&#10;Develop research and development&#10;Develop cooperation with practice">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

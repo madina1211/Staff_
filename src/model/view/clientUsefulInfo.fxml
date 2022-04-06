@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.controller.ClientUsefulInfoController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="760.0" stylesheets="@../../resources/theme.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Vacancy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #28303f;">
+                     <children>
+                        <TableView fx:id="vacancyTableView" layoutX="26.0" layoutY="90.0" prefHeight="449.0" prefWidth="707.0" stylesheets="@../../resources/tableView.css">
+                          <columns>
+                            <TableColumn fx:id="positionTableColumn" prefWidth="383.2000732421875" text="position" />
+                            <TableColumn fx:id="vacancyNumberTableColumn" prefWidth="323.19989013671875" text="vacancy number" />
+                          </columns>
+                        </TableView>
+                        <ImageView fx:id="excelImageView" fitHeight="76.0" fitWidth="70.0" layoutX="676.0" onMouseClicked="#excelExport" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/excel.png" />
+                           </image>
+                        </ImageView>
+                        <ChoiceBox fx:id="departmentChoiceBox" layoutX="448.0" layoutY="20.0" prefHeight="35.0" prefWidth="228.0" style="-fx-background-color: #fafafa;" />
+                        <Label layoutX="23.0" layoutY="15.0" prefHeight="46.0" prefWidth="402.0" text="It is shown vacancy number of each position in the company" textFill="#f6e7e4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Salary">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #28303f;">
+                     <children>
+                        <TableView fx:id="salaryTableView" layoutX="25.0" layoutY="76.0" prefHeight="474.0" prefWidth="707.0" stylesheets="@../../resources/tableView.css">
+                           <columns>
+                              <TableColumn fx:id="salaryPositionTableColumn" prefWidth="372.0" text="position" />
+                              <TableColumn fx:id="salaryMinSalaryTableColumn" prefWidth="334.39996337890625" text="minimum salary" />
+                           </columns>
+                        </TableView>
+                        <ImageView fx:id="salaryExcelImageView" fitHeight="76.0" fitWidth="70.0" layoutX="676.0" onMouseClicked="#salaryExcelExport" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/excel.png" />
+                           </image>
+                        </ImageView>
+                        <ChoiceBox fx:id="salaryDepartmentChoiceBox" layoutX="448.0" layoutY="20.0" prefHeight="35.0" prefWidth="228.0" style="-fx-background-color: #fafafa;" />
+                        <Label layoutX="25.0" layoutY="14.0" prefHeight="46.0" prefWidth="402.0" text="It is shown minimum salary of each position in the company" textFill="#f6e7e4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

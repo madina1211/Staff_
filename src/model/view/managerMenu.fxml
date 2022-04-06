@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.controller.ManagerMenuController">
+   <left>
+      <VBox fx:id="vbox" prefHeight="600.0" prefWidth="160.0" style="-fx-background-color: #28303f;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="tableButton" mnemonicParsing="false" onAction="#tableButtonOnAction" prefHeight="50.0" prefWidth="156.0" style="-fx-background-color: #28303f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Tables" textFill="#fafafa">
+               <font>
+                  <Font name="Bodoni MT Black" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="reportButton" mnemonicParsing="false" onAction="#reportButtonOnAction" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #28303f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Reports" textFill="#fafafa">
+               <font>
+                  <Font name="Bodoni MT Black" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="queryButton" mnemonicParsing="false" onAction="#queryButtonOnAction" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #28303f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Query" textFill="#fafafa">
+               <font>
+                  <Font name="Bodoni MT Black" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewButton" mnemonicParsing="false" onAction="#viewButtonOnAction" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #28303f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="View" textFill="#fafafa">
+               <font>
+                  <Font name="Bodoni MT Black" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="procedureButton" mnemonicParsing="false" onAction="#procedureButtonOnAction" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #28303f; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Procedure" textFill="#fafafa">
+               <font>
+                  <Font name="Bodoni MT Black" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="960.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
